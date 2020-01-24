@@ -1,0 +1,42 @@
+{
+  "parser": "babel-eslint",
+  "extends": [
+    // https://github.com/eslint/eslint/blob/master/conf/eslint-recommended.js
+    "eslint:recommended",
+    "plugin:import/errors",
+    "plugin:import/warnings",
+    // https://github.com/yannickcr/eslint-plugin-react/blob/master/index.js#L118
+    "plugin:react/recommended",
+    "plugin:jsx-a11y/recommended",
+    "prettier",
+    "prettier/react"
+  ],
+  "env": {
+    "browser": true,
+    "jest": true,
+    "es6": true,
+    "node": true
+  },
+  "globals": {
+    "NODE_ENV": false,
+    "CONFIG": false,
+    "APP_VERSION": false,
+    "DOCKER_IMAGE_ID": false
+  },
+  "plugins": [
+    "react", "react-hooks", "jsx-a11y", "prettier"
+  ],
+  "rules": {
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn",
+    "prettier/prettier": "error"
+  },
+  "settings": {
+    "import/resolver": {
+      "babel-module": {}
+    },
+    "react": {
+      "version": "detect"
+    }
+  }
+}

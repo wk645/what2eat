@@ -1,0 +1,16 @@
+.cardDiv {
+  border-style: solid;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  width: 150px;
+  height: 100px;
+  display: grid;
+  margin: auto;
+}
+
+.cardDiv-grid {
+  grid-template-columns: auto auto auto auto;
+  grid-template-rows: 100px 300px;
+  grid-gap: 10px;
+  padding: 10px;
+}

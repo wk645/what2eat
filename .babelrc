@@ -1,0 +1,29 @@
+{
+  "presets": [
+    "@babel/preset-react",
+    ["@babel/preset-env", {
+      "useBuiltIns": "entry",
+      "corejs": "3"
+    }]
+  ],
+  "plugins": [
+    "react-hot-loader/babel",
+    "@babel/plugin-proposal-class-properties"
+  ],
+  "env": {
+    "test": {
+      "presets": [
+        ["@babel/preset-env", {
+          "targets": {
+            "node": "current"
+          }
+        }]
+      ],
+    },
+    "production": {
+      "plugins": [
+        "transform-react-remove-prop-types"
+      ]
+    }
+  }
+}
