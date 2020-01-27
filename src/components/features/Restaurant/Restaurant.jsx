@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-import "./Restaurant";
+import "./Restaurant.css";
 
 const Restaurant = ({
   name,
@@ -12,22 +12,27 @@ const Restaurant = ({
   menuUrl
 }) => {
   return (
-    <div>
-      {console.log(
-        "props in ONE restaurant",
-        name,
-        location,
-        timings,
-        averageCost,
-        rating,
-        menuUrl
-      )}
-      <p>{name}</p>
-      <p>{location}</p>
-      <p>{timings}</p>
-      <p>{averageCost}</p>
-      <p>{rating.score}</p>
-      <p>{menuUrl}</p>
+    <div className="mainCardsDiv">
+      <div className="restaurantCard">
+        <p>
+          <b>Name:</b> {name}
+        </p>
+        <p>
+          <b>Location:</b> {location}
+        </p>
+        <p>
+          <b>Hours:</b> {timings}
+        </p>
+        <p>
+          <b>Cost:</b> {averageCost}
+        </p>
+        <p>
+          <b>Rating:</b> {rating.score}
+        </p>
+        <p>
+          <b>Menu:</b> {menuUrl}
+        </p>
+      </div>
     </div>
   );
 };
@@ -37,7 +42,7 @@ Restaurant.propTypes = {
   location: PropTypes.string,
   timings: PropTypes.string,
   averageCost: PropTypes.number,
-  rating: PropTypes.number,
+  rating: PropTypes.object,
   menuUrl: PropTypes.string
 };
 

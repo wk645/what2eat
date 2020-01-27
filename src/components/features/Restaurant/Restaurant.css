@@ -1,0 +1,16 @@
+body {
+  background-color: #fffdd0;
+}
+
+.restaurantCard {
+  display: block !important;
+  margin: auto !important;
+  border: solid 2px !important;
+  border-radius: 20px !important;
+  width: 70% !important;
+  background-color: lavender !important;
+}
+
+.mainCardsDiv {
+  margin-bottom: 20px;
+}

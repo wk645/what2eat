@@ -7,16 +7,6 @@ import "./Restaurants";
 
 export default class Restaurants extends React.Component {
   render() {
-    console.log("props in restaurants", this.props.location.state.restaurants);
-    // const {
-    //   id,
-    //   name,
-    //   location,
-    //   timings,
-    //   averageCost,
-    //   rating,
-    //   menuUrl
-    // } = this.props.location.state.restaurants;
     return (
       <div>
         <p>Restaurants</p>
